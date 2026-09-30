@@ -112,6 +112,22 @@ func sources(platform string) []Source {
 		},
 
 		Source{
+			Path:  kiroMCPConfigRel,
+			Scope: Home | Project,
+			Read:  kiroServers,
+		},
+		Source{
+			Path:  kiroPowersRel,
+			Scope: Home,
+			Read:  kiroPowers,
+		},
+		Source{
+			Path:  kiroAgentsRel,
+			Scope: Home,
+			Read:  kiroAgents,
+		},
+
+		Source{
 			Path:  opencodeGlobalConfigJSONRel,
 			Scope: Home,
 			Read:  opencodeServers,
