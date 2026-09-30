@@ -146,7 +146,7 @@ install.
 {{if .enforcementEnabled}}
 ## Tool-call enforcement
 
-Each tool call in Claude Code, Codex, and Cursor is checked against Obot's
+Each tool call in Claude Code, Codex, Cursor, and Kiro is checked against Obot's
 allowlist before it runs. The check is a single request to Obot, and it is
 **fail-closed**: if Obot cannot be reached, the device is not enrolled, or the
 hook cannot tell which MCP server a call targets, the call is blocked.
@@ -203,4 +203,4 @@ those by hand if you want them gone: the Codex `[features]` pins `hooks = true`
 and `non_prefixed_mcp_tool_names = false`, and the Obot-added values under VS
 Code's `chat.hookFilesLocations`.
 
-Restart Claude Code, Codex, VS Code, and Cursor afterward to drop the hooks.
+Restart Claude Code, Codex, VS Code, Cursor, and Kiro afterward to drop the hooks.

@@ -134,7 +134,7 @@ upload the file as-is, and assign it to the same targets.
 {{if .enforcementEnabled}}
 ## Tool-call enforcement
 
-Each tool call in Claude Code, Codex, and Cursor is checked against Obot's
+Each tool call in Claude Code, Codex, Cursor, and Kiro is checked against Obot's
 allowlist before it runs. The check is a single request to Obot, and it is
 **fail-closed**: if Obot cannot be reached, the device is not enrolled, or the
 hook cannot tell which MCP server a call targets, the call is blocked.
@@ -169,4 +169,4 @@ files, re-upload them to the same profiles.
 3. Once the script has run everywhere, unassign the app and both configuration
    profiles.
 
-Restart Claude Code, Codex, VS Code, and Cursor afterward to drop the hooks.
+Restart Claude Code, Codex, VS Code, Cursor, and Kiro afterward to drop the hooks.
