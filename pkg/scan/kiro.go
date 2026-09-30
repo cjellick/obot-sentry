@@ -211,7 +211,7 @@ func substituteKiroPluginVars(root, data string) func(*mcpServerSpec) {
 func kiroPlainSegment(name string) bool {
 	return name != "" && name != "." && name != ".." &&
 		!strings.ContainsAny(name, "/\\\x00") &&
-		!(len(name) >= 2 && name[1] == ':')
+		(len(name) < 2 || name[1] != ':')
 }
 
 // kiroAgents reads the custom agent profiles under ~/.kiro/agents,
